@@ -10,33 +10,22 @@ namespace MeuApp
 
         static void Main(string[] args)
         {
-            double value = 2.500;
-            float salario = 2.500f;
-            decimal salarioAnual = 2.500m;
-            char primeiraLetra = 'a';
-            char segundaLetra = 'b';
-            string cadeiaCaracteres = "sou uma string";
+            int inteiro = 100;
+            float real = 25.8f;
 
-            // int inteiro = 100;
-            int inteiro;
-            
-            double inteiroForFloat = inteiro + 0.5;
-            uint inteiroSemSinal = (uint)inteiro;
+            string valorReal = real.ToString();
+            Console.WriteLine(valorReal);
 
-            int? idade = null;
-            bool smart = false;
-            var texto = "Testandoo";
-            Console.WriteLine(value);
-            Console.WriteLine(salario);
-            Console.WriteLine(salarioAnual);
-            Console.WriteLine(primeiraLetra);
-            Console.WriteLine(segundaLetra);
-            Console.WriteLine(cadeiaCaracteres);
-            Console.WriteLine(idade);
-            Console.WriteLine(texto);
-            Console.WriteLine(smart);
-            Console.WriteLine(inteiroSemSinal);
-            Console.WriteLine(inteiroForFloat);
+            inteiro = Convert.ToInt32(real);
+            Console.WriteLine(inteiro);
+
+            int divisao = Convert.ToInt32(22f / 5f);
+            Console.WriteLine(divisao);
+            var value = "4";
+
+            int notMoreString = int.Parse(value);
+            Console.WriteLine(notMoreString);
+
 
         }
 
