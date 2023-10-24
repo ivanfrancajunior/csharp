@@ -17,8 +17,14 @@ namespace MeuApp
             char segundaLetra = 'b';
             string cadeiaCaracteres = "sou uma string";
 
-            int? idade = null;
+            // int inteiro = 100;
+            int inteiro;
+            
+            double inteiroForFloat = inteiro + 0.5;
+            uint inteiroSemSinal = (uint)inteiro;
 
+            int? idade = null;
+            bool smart = false;
             var texto = "Testandoo";
             Console.WriteLine(value);
             Console.WriteLine(salario);
@@ -28,9 +34,15 @@ namespace MeuApp
             Console.WriteLine(cadeiaCaracteres);
             Console.WriteLine(idade);
             Console.WriteLine(texto);
+            Console.WriteLine(smart);
+            Console.WriteLine(inteiroSemSinal);
+            Console.WriteLine(inteiroForFloat);
 
         }
 
+
+
     }
+
 }
 

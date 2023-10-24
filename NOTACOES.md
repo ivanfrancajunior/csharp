@@ -1,5 +1,3 @@
-## Código gerenciado:
-
 ## Tipos de Projeto
 
 - Class Library
@@ -87,7 +85,7 @@ class MinhaClasse
 
 ```
 
-### Variaveis e Constantes
+## Variaveis e Constantes
 
     São estruturas utilizadas para armazenar informações.
 
@@ -105,10 +103,9 @@ class MinhaClasse
 
     Devem ser iniciadas assim que declaradas, caso não sejam recebem o valor default do seu tipo;
 
-### Tipos PRIMITIVOS:
+## Tipos PRIMITIVOS:
 
 ```c#
-
 class TiposPrimitivos
 {
     // Atributos para cada tipo de dado primitivo
@@ -151,7 +148,9 @@ class TiposPrimitivos
     // Métodos (se necessário)
 }
 ```
+
 ### Nullable Types
+
 ```c#
     class ExemploNullable
 {
@@ -202,5 +201,104 @@ class TiposPrimitivos
     }
 }
 
+```
+
+### Valores padrões
+
+```c#
+class ValoresPadrao
+{
+    // Tipos de dados com valores padrão
+    int valorPadraoInteiro;
+    double valorPadraoDouble;
+    bool valorPadraoBooleano;
+    char valorPadraoCaractere;
+    byte valorPadraoByte;
+    string valorPadraoString;
+
+    // Construtor que inicializa os atributos
+    public ValoresPadrao()
+    {
+        // Os valores padrão são atribuídos automaticamente
+
+        // int -> 0 (valor padrão)
+        valorPadraoInteiro = 0;
+
+        // double -> 0.0 (valor padrão)
+        valorPadraoDouble = 0.0;
+
+        // bool -> false (valor padrão)
+        valorPadraoBooleano = false;
+
+        // char -> '\0' (caractere nulo, valor padrão)
+        valorPadraoCaractere = '\0';
+
+        // byte -> 0 (valor padrão)
+        valorPadraoByte = 0;
+
+        // string -> null (valor padrão)
+        valorPadraoString = null;
+    }
+
+    // Métodos (se necessário)
+}
+```
+
+<hr>
+
+# Conversão de tipos
+
+### **Conversão implicita**
+
+```c#
+// Conversão implícita de int para double
+int inteiro = 42;
+double numeroDecimal = inteiro;
+
+// Isso imprimirá 42.0
+Console.WriteLine(numeroDecimal);
+
+```
+
+### **Conversão explicita**
+
+```c#
+double numeroDecimal = 3.14;
+
+// Conversão explícita de double para int
+int inteiro = (int)numeroDecimal;
+
+// Isso imprimirá 3
+Console.WriteLine(inteiro);
+
+```
+
+<hr>
+
+### Conversão usando Parse e Convert:
+
+**Parse:**
+
+- O método Parse é geralmente usado para converter uma representação de texto (como uma string) em um tipo de valor específico, como int, double, bool, etc.
+
+- Ele lança exceções, como FormatException, se a conversão não for possível devido a uma formatação inválida.
+
+```c#
+
+string numeroTexto = "42";
+int numeroInteiro = int.Parse(numeroTexto);
+
+```
+
+**Convert:**
+
+- O método Convert é usado para converter valores entre tipos diferentes, mas principalmente entre tipos numéricos, como int, double, float, etc.
+
+- Ele também lida com conversões de tipos de forma segura, mas não lança exceções de formato. Em vez disso, retorna o valor padrão do tipo, se a conversão não for bem-sucedida.
+
+```c#
+
+string numeroTexto = "3.14";
+double numeroDuplo = Convert.ToDouble(numeroTexto);
 
 ```
