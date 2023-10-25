@@ -386,9 +386,9 @@ bool resultado = condicao1 && condicao2; // resultado é false
 
 **Condicionais**
 
-* As instruções **if** e **else if** são usadas para criar condicionais em seu código, permitindo que você execute diferentes blocos de código com base em condições lógicas.
+- As instruções **if** e **else if** são usadas para criar condicionais em seu código, permitindo que você execute diferentes blocos de código com base em condições lógicas.
 
-* A instrução **switch** é usada para criar uma estrutura de controle de fluxo que permite escolher entre várias opções com base no valor de uma expressão. Ela é frequentemente usada quando você tem várias condições a serem verificadas em relação a uma única variável.
+- A instrução **switch** é usada para criar uma estrutura de controle de fluxo que permite escolher entre várias opções com base no valor de uma expressão. Ela é frequentemente usada quando você tem várias condições a serem verificadas em relação a uma única variável.
 
 ```c#
 
@@ -445,3 +445,44 @@ switch (diaDaSemana)
 }
 
 ```
+
+### Laços de repetição
+
+**for**
+ * O laço **for** é usado quando você sabe exatamente quantas vezes deseja repetir um bloco de código. É composto por três partes: uma inicialização, uma condição e uma expressão de atualização. O bloco de código é repetido enquanto a condição for verdadeira.
+
+```c#
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+```
+
+**while**
+
+ * O laço **while** é usado quando você deseja repetir um bloco de código enquanto uma condição específica for verdadeira. A condição é verificada no início do laço.
+
+```c#
+int i = 1;
+while (i <= 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+```
+
+**do while**
+
+ * O laço **do-while** é semelhante ao while, mas a condição é verificada no final do bloco de código. Isso garante que o bloco de código seja executado pelo menos uma vez, mesmo se a condição for falsa desde o início.
+
+
+```c#
+int i = 1;
+do
+{
+    Console.WriteLine(i);
+    i++;
+} while (i <= 5);
+```
+
+### Metodos e Funções:
