@@ -486,3 +486,24 @@ do
 ```
 
 ### Metodos e Funções:
+
+```c#
+
+    class MinhaClasse
+{
+    // Método simples sem parâmetros e sem retorno
+    public void MetodoSemRetorno()
+    {
+        // Código para realizar uma tarefa
+    }
+
+    // Método com parâmetros e retorno
+    public int MetodoComRetorno(int a, int b)
+    {
+        int resultado = a + b;
+        return resultado;
+    }
+}
+
+
+```
