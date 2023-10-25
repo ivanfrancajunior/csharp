@@ -302,3 +302,83 @@ string numeroTexto = "3.14";
 double numeroDuplo = Convert.ToDouble(numeroTexto);
 
 ```
+
+### Operadores:
+
+**Aritiméticos**
+
+- Adição: Realiza a adição de dois valores.
+
+* Subtração: Realiza a subtração de dois valores.
+
+- Multiplicação: Realiza a multiplicação de dois valores.
+
+* Divisão: Realiza a divisão de um valor pelo outro.
+
+* Módulo: Retorna o resto da divisão entre dois valores.
+
+```c#
+
+int a = 5;
+int b = 3;
+int resultado = a + b; // resultado é 8
+
+```
+
+**Atribuição**
+
+- = Atribuição: Atribui um valor a uma variável.
+
+- += Adição composta: Adiciona o valor à variável e atribui o resultado.
+
+- -= Subtração composta: Subtrai o valor da variável e atribui o resultado.
+
+- \*= Multiplicação composta: Multiplica o valor da variável e atribui o resultado.
+
+- /= Divisão composta: Divide o valor da variável e atribui o resultado.
+
+```c#
+
+int x = 5;
+x += 3; // x agora é 8
+
+```
+
+**Comparação**
+
+* == (Igual): Verifica se dois valores são iguais.
+
+* != (Diferente): Verifica se dois valores são diferentes.
+
+* < (Menor que): Verifica se o valor da esquerda é menor que o da direita.
+
+    *-* > (Maior que): Verifica se o valor da esquerda é maior que o da direita.
+
+    *-* <= (Menor ou igual a): Verifica se o valor da esquerda é menor ou igual ao da direita.
+
+    *-* >= (Maior ou igual a): Verifica se o valor da esquerda é maior ou igual ao da direita.
+
+```c#
+int numeroA = 5;
+int numeroB = 3;
+bool igual = (numeroA == numeroB); // igual é false
+bool diferente = (numeroA !== numeroB); // igual é true
+bool maior = (numeroA > numeroB); // igual é true
+bool menor = (numeroA < numeroB); // igual é false
+
+```
+
+**Lógicos**
+* && (E lógico): Retorna verdadeiro se ambas as expressões forem verdadeiras.
+
+* || (OU lógico): Retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+
+* ! (Negação lógica): Inverte o valor de uma expressão lógica.
+
+```c#
+
+bool condicao1 = true;
+bool condicao2 = false;
+bool resultado = condicao1 && condicao2; // resultado é false
+
+```
