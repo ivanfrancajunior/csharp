@@ -449,7 +449,8 @@ switch (diaDaSemana)
 ### Laços de repetição
 
 **for**
- * O laço **for** é usado quando você sabe exatamente quantas vezes deseja repetir um bloco de código. É composto por três partes: uma inicialização, uma condição e uma expressão de atualização. O bloco de código é repetido enquanto a condição for verdadeira.
+
+- O laço **for** é usado quando você sabe exatamente quantas vezes deseja repetir um bloco de código. É composto por três partes: uma inicialização, uma condição e uma expressão de atualização. O bloco de código é repetido enquanto a condição for verdadeira.
 
 ```c#
 for (int i = 1; i <= 5; i++)
@@ -460,7 +461,7 @@ for (int i = 1; i <= 5; i++)
 
 **while**
 
- * O laço **while** é usado quando você deseja repetir um bloco de código enquanto uma condição específica for verdadeira. A condição é verificada no início do laço.
+- O laço **while** é usado quando você deseja repetir um bloco de código enquanto uma condição específica for verdadeira. A condição é verificada no início do laço.
 
 ```c#
 int i = 1;
@@ -473,8 +474,7 @@ while (i <= 5)
 
 **do while**
 
- * O laço **do-while** é semelhante ao while, mas a condição é verificada no final do bloco de código. Isso garante que o bloco de código seja executado pelo menos uma vez, mesmo se a condição for falsa desde o início.
-
+- O laço **do-while** é semelhante ao while, mas a condição é verificada no final do bloco de código. Isso garante que o bloco de código seja executado pelo menos uma vez, mesmo se a condição for falsa desde o início.
 
 ```c#
 int i = 1;
@@ -505,5 +505,51 @@ do
     }
 }
 
+```
 
+### Parametros opicionais:
+
+    Basta atribuir um '=' na declaração do parametro diretamente nos parametros do método.
+
+    Além disso é necessario que ele venha depois dos outros parametros.
+
+<br>
+
+## Value types e Reference types
+
+Em C#, os tipos de dados são geralmente classificados em dois grupos: tipos de valor (value types) e tipos de referência (reference types). Vou explicar as diferenças entre esses dois conceitos:
+
+**_Tipos de Valor (Value Types):_**
+
+- **Armazenamento Direto:** Os tipos de valor armazenam diretamente seus dados na memória, no local onde a variável é declarada.
+
+- **Tipos Primitivos:** Os tipos de valor incluem tipos primitivos, como inteiros (int, double, etc.), booleanos (bool), caracteres (char) e estruturas personalizadas criadas pelo programador.
+
+- **Cópia por Valor:** Quando você atribui um tipo de valor a outra variável ou passa-o como argumento para um método, uma cópia do valor é criada. Modificações em uma cópia não afetam a original.
+
+Exemplo de tipo de valor:
+
+```C#
+int a = 5;
+int b = a; // 'b' recebe uma cópia de 'a'
+
+b = 10; // Modificar 'b' não afeta 'a'
+a = 75; // 'b' e não é alterado'
+```
+<br>
+
+**_Tipos de Referência (Reference Types):_**
+
+- **Armazenamento de Referência:** Os tipos de referência armazenam referências (ou endereços) na memória, apontando para o local onde os dados reais são armazenados.
+
+- **Classes e Objetos:** Os tipos de referência incluem classes, interfaces, delegados e objetos criados a partir desses tipos. São usados para representar estruturas complexas e objetos.
+
+- **Cópia da Referência:** Quando você atribui um tipo de referência a outra variável ou passa-o como argumento para um método, você está copiando a referência, não os dados reais. Ambas as variáveis apontam para o mesmo local na memória onde os dados estão armazenados.
+
+Exemplo de tipo de referência:
+
+```c#
+List<int> lista1 = new List<int>();
+List<int> lista2 = lista1; // 'lista2' aponta para a mesma lista que 'lista1'
+lista2.Add(42); // Modificar 'lista2' também afeta 'lista1'
 ```

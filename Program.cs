@@ -10,15 +10,16 @@ namespace MeuApp
 
         static void Main(string[] args)
         {
-           
-            
-            MeuMetodo();
+            int a = 5;
+            int b = a; // 'b' recebe uma cópia de 'a'
+
+            a = 75; // 'b' e não é alterado'
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
         }
 
-        static void MeuMetodo()
-        {
-            Console.WriteLine("coisa boa");
-        }
+
 
 
     }
