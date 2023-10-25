@@ -536,6 +536,7 @@ int b = a; // 'b' recebe uma cópia de 'a'
 b = 10; // Modificar 'b' não afeta 'a'
 a = 75; // 'b' e não é alterado'
 ```
+
 <br>
 
 **_Tipos de Referência (Reference Types):_**
@@ -552,4 +553,63 @@ Exemplo de tipo de referência:
 List<int> lista1 = new List<int>();
 List<int> lista2 = lista1; // 'lista2' aponta para a mesma lista que 'lista1'
 lista2.Add(42); // Modificar 'lista2' também afeta 'lista1'
+```
+
+<br>
+
+### Structs
+
+Em C#, uma struct (abreviação de estrutura) é um tipo de valor que é semelhante a uma classe, mas tem algumas diferenças importantes. Aqui estão algumas características das structs em C#:
+
+- Tipo de Valor: As structs são tipos de valor, o que significa que armazenam diretamente seus dados na memória onde a variável é declarada. Isso as diferencia das classes, que são tipos de referência.
+
+- Cópia por Valor: Quando você atribui uma struct a outra variável ou passa-a como argumento para um método, uma cópia completa da struct é criada. Isso significa que as modificações em uma cópia não afetam a original.
+
+- Sem Suporte a Herança: As structs não podem herdar de outras structs ou classes e não podem ser a base de herança para outros tipos.
+
+- Valores Padrão: As structs são inicializadas automaticamente com seus valores padrão. Por exemplo, uma struct que contém um int será inicializada com 0 por padrão.
+
+- Alocação na Pilha: As structs são normalmente alocadas na pilha, o que significa que são mais eficientes em termos de memória em comparação com as classes, que são alocadas no heap. Isso as torna úteis para tipos de dados pequenos e de curta duração.
+
+```c#
+public struct Ponto
+{
+    public int X;
+    public int Y;
+
+    public Ponto(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+}
+```
+
+### Enuns
+
+Em C#, um enum, ou enumeração, é um tipo de dado que consiste em um conjunto de valores nomeados que representam constantes. Enums são úteis quando você deseja criar um conjunto de valores significativos que não mudam ao longo do tempo. Aqui estão algumas características dos enums em C#:
+
+- Conjunto de Valores Nomeados: Os enums consistem em um conjunto finito de valores nomeados, onde cada valor representa uma constante com um nome descritivo. Esses nomes facilitam a leitura e a compreensão do código.
+
+- Valores Inteiros: Internamente, os valores enum são armazenados como números inteiros. O primeiro valor enum tem o valor 0, e os valores subsequentes são incrementados em 1 por padrão. No entanto, você pode definir valores inteiros específicos para cada constante enum.
+
+- Tipos Seguros: Enums são tipos seguros em C#, o que significa que você não pode atribuir valores que não pertençam ao enum, tornando seu código mais robusto.
+
+Sintaxe de Declaração de Enum:
+
+```c#
+public enum DiasDaSemana
+{
+    Domingo,
+    Segunda,
+    Terça,
+    Quarta,
+    Quinta,
+    Sexta,
+    Sábado
+}
+
+ DiasDaSemana dia = DiasDaSemana.Quarta;
+Console.WriteLine("Hoje é " + dia); // Saída: "Hoje é Quarta"
+
 ```
