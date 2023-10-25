@@ -346,17 +346,17 @@ x += 3; // x agora é 8
 
 **Comparação**
 
-* == (Igual): Verifica se dois valores são iguais.
+- == (Igual): Verifica se dois valores são iguais.
 
-* != (Diferente): Verifica se dois valores são diferentes.
+- != (Diferente): Verifica se dois valores são diferentes.
 
-* < (Menor que): Verifica se o valor da esquerda é menor que o da direita.
+- < (Menor que): Verifica se o valor da esquerda é menor que o da direita.
 
-    *-* > (Maior que): Verifica se o valor da esquerda é maior que o da direita.
+  _-_ > (Maior que): Verifica se o valor da esquerda é maior que o da direita.
 
-    *-* <= (Menor ou igual a): Verifica se o valor da esquerda é menor ou igual ao da direita.
+  _-_ <= (Menor ou igual a): Verifica se o valor da esquerda é menor ou igual ao da direita.
 
-    *-* >= (Maior ou igual a): Verifica se o valor da esquerda é maior ou igual ao da direita.
+  _-_ >= (Maior ou igual a): Verifica se o valor da esquerda é maior ou igual ao da direita.
 
 ```c#
 int numeroA = 5;
@@ -369,16 +369,79 @@ bool menor = (numeroA < numeroB); // igual é false
 ```
 
 **Lógicos**
-* && (E lógico): Retorna verdadeiro se ambas as expressões forem verdadeiras.
 
-* || (OU lógico): Retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+- && (E lógico): Retorna verdadeiro se ambas as expressões forem verdadeiras.
 
-* ! (Negação lógica): Inverte o valor de uma expressão lógica.
+- || (OU lógico): Retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+
+- ! (Negação lógica): Inverte o valor de uma expressão lógica.
 
 ```c#
 
 bool condicao1 = true;
 bool condicao2 = false;
 bool resultado = condicao1 && condicao2; // resultado é false
+
+```
+
+**Condicionais**
+
+* As instruções **if** e **else if** são usadas para criar condicionais em seu código, permitindo que você execute diferentes blocos de código com base em condições lógicas.
+
+* A instrução **switch** é usada para criar uma estrutura de controle de fluxo que permite escolher entre várias opções com base no valor de uma expressão. Ela é frequentemente usada quando você tem várias condições a serem verificadas em relação a uma única variável.
+
+```c#
+
+//if e else if
+
+int nota = 80;
+
+if (nota >= 90)
+{
+    Console.WriteLine("Aprovado com nota A.");
+}
+else if (nota >= 80)
+{
+    Console.WriteLine("Aprovado com nota B.");
+}
+else if (nota >= 70)
+{
+    Console.WriteLine("Aprovado com nota C.");
+}
+else
+{
+    Console.WriteLine("Reprovado.");
+}
+
+
+//switch
+
+int diaDaSemana = 3;
+
+switch (diaDaSemana)
+{
+    case 1:
+        Console.WriteLine("Segunda-feira");
+        break;
+    case 2:
+        Console.WriteLine("Terça-feira");
+        break;
+    case 3:
+        Console.WriteLine("Quarta-feira");
+        break;
+    case 4:
+        Console.WriteLine("Quinta-feira");
+        break;
+    case 5:
+        Console.WriteLine("Sexta-feira");
+        break;
+    case 6:
+    case 7:
+        Console.WriteLine("Fim de semana");
+        break;
+    default:
+        Console.WriteLine("Dia inválido");
+        break;
+}
 
 ```
